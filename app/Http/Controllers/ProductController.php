@@ -38,7 +38,14 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Product();
+        $product->name = $request->input('product_name');
+        $product->price = $request->input('price');
+        $product->image = $request->input('image');
+        $product->public_flag = $request->input('public_flag');
+        $product->save();
+
+        return to_route('products.index');
     }
 
     /**

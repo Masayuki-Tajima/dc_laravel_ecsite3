@@ -19,11 +19,6 @@
             </div>
 
             <div>
-                <label for="product_qty">個数</label>
-                <input type="text" name="product_qty" required>
-            </div>
-
-            <div>
                 <label for="image">商品画像</label>
                 <input type="file" name="image">
             </div>
@@ -31,8 +26,8 @@
             <div>
                 <label for="public_flag">公開フラグ</label>
                 <select name="public_flag">
-                    <option value="1">公開</option>
-                    <option value="0">非公開</option>
+                    <option value=1>公開</option>
+                    <option value=0>非公開</option>
                 </select>
             </div>
 
