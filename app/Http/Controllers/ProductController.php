@@ -67,7 +67,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -79,7 +79,14 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product->name = $request->input('product_name');
+        $product->price = $request->input('price');
+        $product->image = $request->input('image');
+        $product->public_flag = $request->input('public_flag');
+        $product->update();
+
+        return to_route('products.index');
+
     }
 
     /**
