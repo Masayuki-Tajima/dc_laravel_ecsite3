@@ -6,7 +6,7 @@
             <h2>商品登録</h2>
         </div>
 
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div>
                 <label for="product_name">商品名</label>
