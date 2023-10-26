@@ -15,9 +15,10 @@ use App\Http\Controllers\CartController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('products.index');
+// });
+Route::get('/', [App\Http\Controllers\ProductController::class, 'index']);
 
 Auth::routes();
 
