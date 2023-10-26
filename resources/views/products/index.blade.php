@@ -14,9 +14,12 @@
                 </div>
             </div>
 
-            <form method="post" action="{{ route('products.destroy', $product->id) }}">
+            <form method="post" action="{{ route('carts.store', $product->id) }}">
                 @csrf
                 <input type="submit" name="cartIn" value="カートに入れる">
+                <input type="hidden" name="user_id" value="{{ Auth::id() }}">
+                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                <input type="hidden" name="product_qty" value="1">
             </form>
 
             <form method="post" action="{{ route('products.destroy', $product->id) }}">
