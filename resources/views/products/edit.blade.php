@@ -20,6 +20,11 @@
             </div>
 
             <div>
+                <label for="price">個数</label>
+                <input type="text" name="qty" value="{{ $product->qty }}" required>
+            </div>
+
+            <div>
                 <label for="image">商品画像</label>
                 <input type="file" name="image">
             </div>
