@@ -24,7 +24,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 
-Route::resource('products', ProductController::class);
+Route::resource('products', ProductController::class)->middleware('auth');
 
 Route::controller(CartController::class)->group(function () {
     Route::get('users/carts', 'index')->name('carts.index');
