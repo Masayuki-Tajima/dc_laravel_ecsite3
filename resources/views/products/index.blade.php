@@ -22,11 +22,13 @@
                 <input type="hidden" name="product_qty" value="1">
             </form>
 
-            <form method="post" action="{{ route('products.destroy', $product->id) }}">
-                @csrf
-                @method('DELETE')
-                <input type="submit" name="delete" value="削除">
-            </form>
+            @if(Auth::user()->name == "ec_admin")
+                <form method="post" action="{{ route('products.destroy', $product->id) }}">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" name="delete" value="削除">
+                </form>
+            @endif
 
         </div>
         @endforeach
