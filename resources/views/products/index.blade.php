@@ -22,7 +22,7 @@
                 <input type="hidden" name="product_qty" value="1">
             </form>
 
-            @if(Auth::user()->name == "ec_admin")
+            {{-- @if(Auth::user()->name == "ec_admin")
                 <a href="{{route('products.edit', $product)}}">編集</a>
             @endif
 
@@ -33,7 +33,7 @@
                     <input type="submit" name="delete" value="削除">
                 </form>
             @endif
-
+ --}}
         </div>
         @endforeach
     </div>
