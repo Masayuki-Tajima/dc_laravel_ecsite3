@@ -47,6 +47,10 @@ class CartController extends Controller
         // dump($request->user_id);
         Cart::instance(Auth::user()->id)->add(
             [ 
+                'id' => $request->id,
+                'name' => $request->name,
+                'price' => $request->price, 
+                'weight' => 10, 
                 'user_id' => $request->user_id, 
                 'product_id' => $request->product_id, 
                 'qty' => $request->product_qty, 

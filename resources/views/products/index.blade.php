@@ -17,6 +17,9 @@
             <form method="post" action="{{ route('carts.store', $product->id) }}">
                 @csrf
                 <input type="submit" name="cartIn" value="カートに入れる">
+                <input type="hidden" name="id" value="{{ $product->id }}">
+                <input type="hidden" name="name" value="{{ $product->name }}">
+                <input type="hidden" name="price" value="{{ $product->price }}">
                 <input type="hidden" name="user_id" value="{{ Auth::id() }}">
                 <input type="hidden" name="product_id" value="{{ $product->id }}">
                 <input type="hidden" name="product_qty" value="1">

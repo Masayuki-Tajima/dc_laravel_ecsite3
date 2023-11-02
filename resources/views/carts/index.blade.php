@@ -24,7 +24,7 @@
             @foreach ($cart as $product)
             <div class="col-md-2 mt-2">
                 <a href="{{route('products.show', $product->id)}}">
-                    <img src="{{ asset('img/dummy.png')}}" class="img-fluid w-100">
+                    <img src="{{ asset($product->image)}}" class="img-fluid w-100">
                 </a>
             </div>
             <div class="col-md-6 mt-4">
@@ -54,6 +54,7 @@
                 </div>
             </div>
         </div>
+        <a href="{{ route('products.index') }}">戻る</a>
     </div>
 </div>
 @endsection
