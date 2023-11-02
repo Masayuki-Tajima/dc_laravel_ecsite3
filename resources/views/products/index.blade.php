@@ -23,6 +23,10 @@
             </form>
 
             @if(Auth::user()->name == "ec_admin")
+                <a href="{{route('products.edit', $product)}}">編集</a>
+            @endif
+
+            @if(Auth::user()->name == "ec_admin")
                 <form method="post" action="{{ route('products.destroy', $product->id) }}">
                     @csrf
                     @method('DELETE')

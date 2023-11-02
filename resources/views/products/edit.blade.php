@@ -26,7 +26,7 @@
 
             <div>
                 <label for="image">商品画像</label>
-                <input type="file" name="image">
+                <input type="file" name="image" value="{{ $product->image }}">
             </div>
 
             <div>
