@@ -4,7 +4,7 @@
     <div class="container h-100">
         @foreach($products as $product)
         <div class="col-3">
-            <img src="{{ asset('images/orange.jpg') }}" class="img-thumbnail">
+            <img src="{{ asset($product->image) }}" class="img-thumbnail">
             <div class="row">
                 <div class="col-12">
                     <p>
