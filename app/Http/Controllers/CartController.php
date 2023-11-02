@@ -44,11 +44,12 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
+        // dump(Auth::user()->id);
         Cart::instance(Auth::user()->id)->add(
             [ 
                 'user_id' => $request->user_id, 
                 'product_id' => $request->product_id, 
-                'product_qty' => $request->product_qty, 
+                'qty' => $request->product_qty, 
             ] 
         );
 
