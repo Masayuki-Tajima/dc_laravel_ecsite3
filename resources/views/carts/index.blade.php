@@ -56,6 +56,8 @@
         </div>
         <a href="{{ route('products.index') }}" class="btn samuraimart-favorite-button border-dark text-dark mr-3">戻る</a>
         <form method="post" action="{{route('carts.destroy')}}" class="d-flex justify-content-end mt-3">
+            {{ csrf_field() }}
+            <input type="hidden" name="_method" value="DELETE">
             @if ($total > 0)
                 <button type="submit" class="btn samuraimart-submit-button">購入を確定する</button>
             @else

@@ -51,7 +51,7 @@ class CartController extends Controller
                 'id' => $request->id,
                 'name' => $request->name,
                 'price' => $request->price, 
-                'weight' => 10, 
+                'weight' => $request->weight, 
                 'user_id' => $request->user_id, 
                 'product_id' => $request->product_id, 
                 'qty' => $request->product_qty, 
@@ -109,7 +109,7 @@ class CartController extends Controller
         $count += 1;
         Cart::instance(Auth::user()->id)->store($count);
 
-        DB::table('shoppingcart')->where('instance', Auth::user()->id)->where('number', null)->update(['number' => $count, 'buy_flag' => true]);
+        DB::table('shoppingcart')->where('instance', Auth::user()->id)->update(['buy_flag' => true]);
 
         Cart::instance(Auth::user()->id)->destroy();
 
