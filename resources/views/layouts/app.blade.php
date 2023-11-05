@@ -41,9 +41,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+                        @auth
                         <li class="nav-item mr-5">
                             <a class="nav-link" href="{{ route('carts.index') }}">カートへ</a>
                         </li>
+                        @endauth
         
                         @guest
                             @if (Route::has('login'))

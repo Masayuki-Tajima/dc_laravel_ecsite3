@@ -55,6 +55,11 @@
             </div>
         </div>
         <a href="{{ route('products.index') }}">戻る</a>
+        @if ($total > 0)
+            <button type="submit" class="btn samuraimart-submit-button">購入を確定する</button>
+        @else
+            <button type="submit" class="btn samuraimart-submit-button disabled">購入を確定する</button>
+        @endif
     </div>
 </div>
 @endsection
