@@ -50,11 +50,11 @@ class CartController extends Controller
             [ 
                 'id' => $request->id,
                 'name' => $request->name,
+                'qty' => $request->product_qty,
                 'price' => $request->price, 
                 'weight' => $request->weight, 
-                'user_id' => $request->user_id, 
-                'product_id' => $request->product_id, 
-                'qty' => $request->product_qty, 
+                // 'user_id' => $request->user_id, 
+                // 'product_id' => $request->product_id,  
             ] 
         );
 
